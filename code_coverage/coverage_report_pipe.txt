@@ -1,0 +1,45 @@
+File 'lf_server.cpp'
+Lines executed:84.39% of 173
+Creating 'lf_server.cpp.gcov'
+
+File 'PrimMST.cpp'
+Lines executed:100.00% of 30
+Creating 'PrimMST.cpp.gcov'
+
+File 'KruskalMST.cpp'
+Lines executed:100.00% of 30
+Creating 'KruskalMST.cpp.gcov'
+
+File 'Graph.h'
+Lines executed:90.48% of 21
+Creating 'Graph.h.gcov'
+
+File 'MSTFactory.cpp'
+Lines executed:100.00% of 6
+Creating 'MSTFactory.cpp.gcov'
+
+File 'MSTSolver.h'
+Lines executed:100.00% of 1
+Creating 'MSTSolver.h.gcov'
+
+File 'Tree.h'
+Lines executed:100.00% of 57
+Creating 'Tree.h.gcov'
+
+File 'pipe_server.cpp'
+Lines executed:73.91% of 230
+Creating 'pipe_server.cpp.gcov'
+
+File 'TaskQueue.h'
+Lines executed:96.30% of 27
+Creating 'TaskQueue.h.gcov'
+
+File 'Task.h'
+Lines executed:100.00% of 3
+Creating 'Task.h.gcov'
+
+File 'PipelineWorker.h'
+Lines executed:100.00% of 12
+Creating 'PipelineWorker.h.gcov'
+
+Lines executed:84.75% of 590
