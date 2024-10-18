@@ -1,4 +1,3 @@
-Here is the full README, now organized into a single cohesive document:
 
 # Minimum Spanning Tree (MST) Project
 
@@ -216,3 +215,141 @@ The client connects to the server and sends commands, receiving the results asyn
 ## Summary
 
 This project combines **MST algorithms** with **multithreaded server architectures** using the **Pipeline Pattern** and **Leader-Follower Thread Pool**. The server efficiently handles client requests for graph operations and MST calculations, with the ability to dynamically choose between algorithms at runtime. The system is designed for scalability and efficient resource usage with thread-safe task processing and asynchronous communication.
+
+
+# section 6 and 7
+
+- valgrind --tool=memcheck ./pipe_server &> pipe_memory.txt
+
+- valgrind --tool=helgrind ./pipe_server > helgrind_output_pipe.txt 2>&1
+
+- valgrind --leak-check=full --track-origins=yes ./pipe_server > valgrind_output1.txt
+
+
+
+
+# Server Architecture Diagrams
+
+## Pipeline Server
+
+```
++---------------------+
+|     Main Thread     |
+|---------------------|
+| - Start Server      |
+| - Accept Clients    |
+| - Read Client Data  |
+| - Enqueue Requests  |
++----------+----------+
+           |
+           v
++----------+----------+
+|  Request Queue      |
++----------+----------+
+           |
+           v
++----------+----------+        +------------------------+
+| Request Worker      |        |   Client Management    |
+| Thread              |        |------------------------|
+|---------------------|        | - Manage Client Sockets|
+| - Parse Requests    |        | - Handle Sessions      |
+| - Validate Requests |        +-----------+------------+
+| - Enqueue to        |                    |
+|   Processing Queue  |                    |
++----------+----------+                    |
+           |                               |
+           v                               |
++----------+----------+                    |
+| Processing Queue    |                    |
++----------+----------+                    |
+           |                               |
+           v                               |
++----------+----------+                    |
+| Processing Worker   |                    |
+| Thread              |                    |
+|---------------------|                    |
+| - Perform MST Calc  |                    |
+| - Enqueue to        |                    |
+|   Response Queue    |                    |
++----------+----------+                    |
+           |                               |
+           v                               |
++----------+----------+                    |
+| Response Queue      |                    |
++----------+----------+                    |
+           |                               |
+           v                               |
++----------+----------+                    |
+| Response Worker     |                    |
+| Thread              |                    |
+|---------------------|                    |
+| - Send Responses    |                    |
+| - Handle Shutdown   |                    |
++----------+----------+                    |
+           |                               |
+           v                               |
++----------+----------+                    |
+|  Shutdown Mechanism | <------------------+
+|---------------------|
+| - Detect Shutdown   |
+| - Stop Queues       |
+| - Join Threads      |
+| - Clean Up Resources|
++---------------------+
+```
+
+## Leaderfollower Server
+
+```
++----------------------------+
+|        Main Thread         |
+|----------------------------|
+| - Initialize Server Socket |
+| - Bind & Listen on Port    |
+| - Start Leader-Follower    |
+|   Thread Pool              |
++------------+---------------+
+             |
+             v
++------------+---------------+
+|   Leader-Follower Pool     |
+|----------------------------|
+| - Contains Multiple Threads|
+| - Manage Leader Election   |
++------+-----+-----+---------+
+       |     |     |
+       |     |     |
+       v     v     v
++------+ +---+ +---+ +---+
+|Thread| |Thread| |Thread| |Thread|
+|  1   | |  2   | |  3   | |  4   |
+|------| |------| |------| |------|
+| - Wait to Become Leader       |
+| - On Leadership: Accept Client|
+| - Handle Client Requests      |
+| - Release Leadership          |
++------+ +---+ +---+ +---+
+       |     |     |
+       |     |     |
+       v     v     v
++----------------------------+
+|      Client Handler         |
+|----------------------------|
+| - Read Client Requests      |
+| - Parse Commands            |
+| - Perform Graph/MST Ops     |
+| - Send Responses            |
+| - Detect Shutdown Command   |
++------------+---------------+
+             |
+             v
++------------+---------------+
+|      Shutdown Mechanism     |
+|----------------------------|
+| - Set Shutdown Flag         |
+| - Notify All Threads        |
+| - Join All Worker Threads   |
+| - Close Server Socket       |
+| - Clean Up Resources        |
++----------------------------+
+```

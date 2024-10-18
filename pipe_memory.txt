@@ -1,0 +1,441 @@
+==14903== Memcheck, a memory error detector
+==14903== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==14903== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==14903== Command: ./pipe_server
+==14903== 
+Server started on port 8080
+[PipelineWorker] Waiting for task...
+[PipelineWorker] Waiting for task...
+[PipelineWorker] Waiting for task...
+[Server] Client connected.
+[Server] Received request: Newgraph 5
+
+[Server] Enqueuing request parsing.
+[TaskQueue] Task enqueued: Newgraph 5
+
+[TaskQueue] Task dequeued: Newgraph 5
+
+[PipelineWorker] Task dequeued: Newgraph 5
+
+[TaskQueue] Task enqueued: Newgraph
+[PipelineWorker] Task executed: Newgraph 5
+
+[PipelineWorker] Waiting for task...
+[TaskQueue] Task dequeued: Newgraph
+[PipelineWorker] Task dequeued: Newgraph
+[Server] Newgraph command processed.
+[TaskQueue] Task enqueued: Graph initialized with 5 vertices.
+
+[PipelineWorker] Task executed: Newgraph
+[PipelineWorker] Waiting for task...
+[TaskQueue] Task dequeued: Graph initialized with 5 vertices.
+
+[PipelineWorker] Task dequeued: Graph initialized with 5 vertices.
+
+[Server] Response sent for Newgraph.
+[PipelineWorker] Task executed: Graph initialized with 5 vertices.
+
+[PipelineWorker] Waiting for task...
+[Server] Received request: Newedge 0 1 10
+
+[Server] Enqueuing request parsing.
+[TaskQueue] Task enqueued: Newedge 0 1 10
+
+[TaskQueue] Task dequeued: Newedge 0 1 10
+
+[PipelineWorker] Task dequeued: Newedge 0 1 10
+
+[TaskQueue] Task enqueued: Newedge
+[PipelineWorker] Task executed: Newedge 0 1 10
+
+[PipelineWorker] Waiting for task...
+[TaskQueue] Task dequeued: Newedge
+[PipelineWorker] Task dequeued: Newedge
+[Server] Newedge command processed.
+[TaskQueue] Task enqueued: Added edge: 0 -> 1 with weight 10.
+
+[PipelineWorker] Task executed: Newedge
+[PipelineWorker] Waiting for task...
+[TaskQueue] Task dequeued: Added edge: 0 -> 1 with weight 10.
+
+[PipelineWorker] Task dequeued: Added edge: 0 -> 1 with weight 10.
+
+[Server] Response sent for Newedge.
+[PipelineWorker] Task executed: Added edge: 0 -> 1 with weight 10.
+
+[PipelineWorker] Waiting for task...
+[Server] Received request: Newedge 1 2 5
+
+[Server] Enqueuing request parsing.
+[TaskQueue] Task enqueued: Newedge 1 2 5
+
+[TaskQueue] Task dequeued: Newedge 1 2 5
+
+[PipelineWorker] Task dequeued: Newedge 1 2 5
+
+[TaskQueue] Task enqueued: Newedge
+[PipelineWorker] Task executed: Newedge 1 2 5
+
+[PipelineWorker] Waiting for task...
+[TaskQueue] Task dequeued: Newedge
+[PipelineWorker] Task dequeued: Newedge
+[Server] Newedge command processed.
+[TaskQueue] Task enqueued: Added edge: 1 -> 2 with weight 5.
+
+[PipelineWorker] Task executed: Newedge
+[PipelineWorker] Waiting for task...
+[TaskQueue] Task dequeued: Added edge: 1 -> 2 with weight 5.
+
+[PipelineWorker] Task dequeued: Added edge: 1 -> 2 with weight 5.
+
+[Server] Response sent for Newedge.
+[PipelineWorker] Task executed: Added edge: 1 -> 2 with weight 5.
+
+[PipelineWorker] Waiting for task...
+[Server] Received request: Newedge 2 3 20
+
+[Server] Enqueuing request parsing.
+[TaskQueue] Task enqueued: Newedge 2 3 20
+
+[TaskQueue] Task dequeued: Newedge 2 3 20
+
+[PipelineWorker] Task dequeued: Newedge 2 3 20
+
+[TaskQueue] Task enqueued: Newedge
+[PipelineWorker] Task executed: Newedge 2 3 20
+
+[PipelineWorker] Waiting for task...
+[TaskQueue] Task dequeued: Newedge
+[PipelineWorker] Task dequeued: Newedge
+[Server] Newedge command processed.
+[TaskQueue] Task enqueued: Added edge: 2 -> 3 with weight 20.
+
+[PipelineWorker] Task executed: Newedge
+[PipelineWorker] Waiting for task...
+[TaskQueue] Task dequeued: Added edge: 2 -> 3 with weight 20.
+
+[PipelineWorker] Task dequeued: Added edge: 2 -> 3 with weight 20.
+
+[Server] Response sent for Newedge.
+[PipelineWorker] Task executed: Added edge: 2 -> 3 with weight 20.
+
+[PipelineWorker] Waiting for task...
+[Server] Received request: Newedge 3 4 25
+
+[Server] Enqueuing request parsing.
+[TaskQueue] Task enqueued: Newedge 3 4 25
+
+[TaskQueue] Task dequeued: Newedge 3 4 25
+
+[PipelineWorker] Task dequeued: Newedge 3 4 25
+
+[TaskQueue] Task enqueued: Newedge
+[PipelineWorker] Task executed: Newedge 3 4 25
+
+[PipelineWorker] Waiting for task...
+[TaskQueue] Task dequeued: Newedge
+[PipelineWorker] Task dequeued: Newedge
+[Server] Newedge command processed.
+[TaskQueue] Task enqueued: Added edge: 3 -> 4 with weight 25.
+
+[PipelineWorker] Task executed: Newedge
+[PipelineWorker] Waiting for task...
+[TaskQueue] Task dequeued: Added edge: 3 -> 4 with weight 25.
+
+[PipelineWorker] Task dequeued: Added edge: 3 -> 4 with weight 25.
+
+[Server] Response sent for Newedge.
+[PipelineWorker] Task executed: Added edge: 3 -> 4 with weight 25.
+
+[PipelineWorker] Waiting for task...
+[Server] Received request: MST Prim
+
+[Server] Enqueuing request parsing.
+[TaskQueue] Task enqueued: MST Prim
+
+[TaskQueue] Task dequeued: MST Prim
+
+[PipelineWorker] Task dequeued: MST Prim
+
+[TaskQueue] Task enqueued: MST
+[PipelineWorker] Task executed: MST Prim
+
+[PipelineWorker] Waiting for task...
+[TaskQueue] Task dequeued: MST
+[PipelineWorker] Task dequeued: MST
+Solving MST using Prim's Algorithm
+[Server] MST command (Prim) processed.
+[TaskQueue] Task enqueued: MST using Prim:
+0 -- 1 == 10
+1 -- 2 == 5
+2 -- 3 == 20
+3 -- 4 == 25
+Total cost of MST: 60
+
+[PipelineWorker] Task executed: MST
+[PipelineWorker] Waiting for task...
+[TaskQueue] Task dequeued: MST using Prim:
+0 -- 1 == 10
+1 -- 2 == 5
+2 -- 3 == 20
+3 -- 4 == 25
+Total cost of MST: 60
+
+[PipelineWorker] Task dequeued: MST using Prim:
+0 -- 1 == 10
+1 -- 2 == 5
+2 -- 3 == 20
+3 -- 4 == 25
+Total cost of MST: 60
+
+[Server] Response sent for MST command.
+[PipelineWorker] Task executed: MST using Prim:
+0 -- 1 == 10
+1 -- 2 == 5
+2 -- 3 == 20
+3 -- 4 == 25
+Total cost of MST: 60
+
+[PipelineWorker] Waiting for task...
+[Server] Received request: MST Kruskal
+
+[Server] Enqueuing request parsing.
+[TaskQueue] Task enqueued: MST Kruskal
+
+[TaskQueue] Task dequeued: MST Kruskal
+
+[PipelineWorker] Task dequeued: MST Kruskal
+
+[TaskQueue] Task enqueued: MST
+[PipelineWorker] Task executed: MST Kruskal
+
+[PipelineWorker] Waiting for task...
+[TaskQueue] Task dequeued: MST
+[PipelineWorker] Task dequeued: MST
+Solving MST using Kruskal's Algorithm
+[Server] MST command (Kruskal) processed.
+[TaskQueue] Task enqueued: MST using Kruskal:
+1 -- 2 == 5
+0 -- 1 == 10
+2 -- 3 == 20
+3 -- 4 == 25
+Total cost of MST: 60
+
+[PipelineWorker] Task executed: MST
+[PipelineWorker] Waiting for task...
+[TaskQueue] Task dequeued: MST using Kruskal:
+1 -- 2 == 5
+0 -- 1 == 10
+2 -- 3 == 20
+3 -- 4 == 25
+Total cost of MST: 60
+
+[PipelineWorker] Task dequeued: MST using Kruskal:
+1 -- 2 == 5
+0 -- 1 == 10
+2 -- 3 == 20
+3 -- 4 == 25
+Total cost of MST: 60
+
+[Server] Response sent for MST command.
+[PipelineWorker] Task executed: MST using Kruskal:
+1 -- 2 == 5
+0 -- 1 == 10
+2 -- 3 == 20
+3 -- 4 == 25
+Total cost of MST: 60
+
+[PipelineWorker] Waiting for task...
+[Server] Received request: MST Longest
+
+[Server] Enqueuing request parsing.
+[TaskQueue] Task enqueued: MST Longest
+
+[TaskQueue] Task dequeued: MST Longest
+
+[PipelineWorker] Task dequeued: MST Longest
+
+[TaskQueue] Task enqueued: MST
+[PipelineWorker] Task executed: MST Longest
+
+[PipelineWorker] Waiting for task...
+[TaskQueue] Task dequeued: MST
+[PipelineWorker] Task dequeued: MST
+[TaskQueue] Task enqueued: Invalid algorithm. Use 'Prim', 'Kruskal', 'Longest', 'Shortest <src> <dest>', or 'Average'.
+
+[PipelineWorker] Task executed: MST
+[PipelineWorker] Waiting for task...
+[TaskQueue] Task dequeued: Invalid algorithm. Use 'Prim', 'Kruskal', 'Longest', 'Shortest <src> <dest>', or 'Average'.
+
+[PipelineWorker] Task dequeued: Invalid algorithm. Use 'Prim', 'Kruskal', 'Longest', 'Shortest <src> <dest>', or 'Average'.
+
+[Server] Response sent for invalid MST command.
+[PipelineWorker] Task executed: Invalid algorithm. Use 'Prim', 'Kruskal', 'Longest', 'Shortest <src> <dest>', or 'Average'.
+
+[PipelineWorker] Waiting for task...
+[Server] Received request: MST Shortest 0 4
+
+[Server] Enqueuing request parsing.
+[TaskQueue] Task enqueued: MST Shortest 0 4
+
+[TaskQueue] Task dequeued: MST Shortest 0 4
+
+[PipelineWorker] Task dequeued: MST Shortest 0 4
+
+[TaskQueue] Task enqueued: MST
+[PipelineWorker] Task executed: MST Shortest 0 4
+
+[PipelineWorker] Waiting for task...
+[TaskQueue] Task dequeued: MST
+[PipelineWorker] Task dequeued: MST
+[TaskQueue] Task enqueued: Invalid algorithm. Use 'Prim', 'Kruskal', 'Longest', 'Shortest <src> <dest>', or 'Average'.
+
+[PipelineWorker] Task executed: MST
+[PipelineWorker] Waiting for task...
+[TaskQueue] Task dequeued: Invalid algorithm. Use 'Prim', 'Kruskal', 'Longest', 'Shortest <src> <dest>', or 'Average'.
+
+[PipelineWorker] Task dequeued: Invalid algorithm. Use 'Prim', 'Kruskal', 'Longest', 'Shortest <src> <dest>', or 'Average'.
+
+[Server] Response sent for invalid MST command.
+[PipelineWorker] Task executed: Invalid algorithm. Use 'Prim', 'Kruskal', 'Longest', 'Shortest <src> <dest>', or 'Average'.
+
+[PipelineWorker] Waiting for task...
+[Server] Received request: MST Average
+
+[Server] Enqueuing request parsing.
+[TaskQueue] Task enqueued: MST Average
+
+[TaskQueue] Task dequeued: MST Average
+
+[PipelineWorker] Task dequeued: MST Average
+
+[TaskQueue] Task enqueued: MST
+[PipelineWorker] Task executed: MST Average
+
+[PipelineWorker] Waiting for task...
+[TaskQueue] Task dequeued: MST
+[PipelineWorker] Task dequeued: MST
+[TaskQueue] Task enqueued: Invalid algorithm. Use 'Prim', 'Kruskal', 'Longest', 'Shortest <src> <dest>', or 'Average'.
+
+[PipelineWorker] Task executed: MST
+[PipelineWorker] Waiting for task...
+[TaskQueue] Task dequeued: Invalid algorithm. Use 'Prim', 'Kruskal', 'Longest', 'Shortest <src> <dest>', or 'Average'.
+
+[PipelineWorker] Task dequeued: Invalid algorithm. Use 'Prim', 'Kruskal', 'Longest', 'Shortest <src> <dest>', or 'Average'.
+
+[Server] Response sent for invalid MST command.
+[PipelineWorker] Task executed: Invalid algorithm. Use 'Prim', 'Kruskal', 'Longest', 'Shortest <src> <dest>', or 'Average'.
+
+[PipelineWorker] Waiting for task...
+[Server] Received request: Removeedge 1 2
+
+[Server] Enqueuing request parsing.
+[TaskQueue] Task enqueued: Removeedge 1 2
+
+[TaskQueue] Task dequeued: Removeedge 1 2
+
+[PipelineWorker] Task dequeued: Removeedge 1 2
+
+[TaskQueue] Task enqueued: Removeedge
+[PipelineWorker] Task executed: Removeedge 1 2
+
+[PipelineWorker] Waiting for task...
+[TaskQueue] Task dequeued: Removeedge
+[PipelineWorker] Task dequeued: Removeedge
+[Server] Removeedge command processed.
+[TaskQueue] Task enqueued: Removed edge: 1 -> 2.
+
+[PipelineWorker] Task executed: Removeedge
+[PipelineWorker] Waiting for task...
+[TaskQueue] Task dequeued: Removed edge: 1 -> 2.
+
+[PipelineWorker] Task dequeued: Removed edge: 1 -> 2.
+
+[Server] Response sent for Removeedge.
+[PipelineWorker] Task executed: Removed edge: 1 -> 2.
+
+[PipelineWorker] Waiting for task...
+[Server] Received request: MST Prim
+
+[Server] Enqueuing request parsing.
+[TaskQueue] Task enqueued: MST Prim
+
+[TaskQueue] Task dequeued: MST Prim
+
+[PipelineWorker] Task dequeued: MST Prim
+
+[TaskQueue] Task enqueued: MST
+[PipelineWorker] Task executed: MST Prim
+
+[PipelineWorker] Waiting for task...
+[TaskQueue] Task dequeued: MST
+[PipelineWorker] Task dequeued: MST
+Solving MST using Prim's Algorithm
+[Server] MST command (Prim) processed.
+[TaskQueue] Task enqueued: MST using Prim:
+0 -- 1 == 10
+Total cost of MST: 10
+
+[PipelineWorker] Task executed: MST
+[PipelineWorker] Waiting for task...
+[TaskQueue] Task dequeued: MST using Prim:
+0 -- 1 == 10
+Total cost of MST: 10
+
+[PipelineWorker] Task dequeued: MST using Prim:
+0 -- 1 == 10
+Total cost of MST: 10
+
+[Server] Response sent for MST command.
+[PipelineWorker] Task executed: MST using Prim:
+0 -- 1 == 10
+Total cost of MST: 10
+
+[PipelineWorker] Waiting for task...
+[Server] Received request: shutdown
+
+[Server] Enqueuing request parsing.
+[TaskQueue] Task enqueued: shutdown
+
+[TaskQueue] Task dequeued: shutdown
+
+[PipelineWorker] Task dequeued: shutdown
+
+[TaskQueue] Task enqueued: Server is shutting down.
+
+[TaskQueue] Task queue stopped.
+[TaskQueue] Task queue stopped.
+[TaskQueue] Task dequeued: Server is shutting down.
+
+[PipelineWorker] Task dequeued: Server is shutting down.
+
+[TaskQueue] Task queue stopped.
+[PipelineWorker] Task executed: shutdown
+
+[PipelineWorker] Waiting for task...
+[TaskQueue] Queue stopped and no tasks available.
+[PipelineWorker] No more tasks and task queue is stopped. Exiting.
+[Server] Server is shutting down.
+[PipelineWorker] Task executed: Server is shutting down.
+
+[PipelineWorker] Waiting for task...
+[TaskQueue] Queue stopped and no tasks available.
+[PipelineWorker] No more tasks and task queue is stopped. Exiting.
+[Server] Server has shut down.
+[TaskQueue] Queue stopped and no tasks available.
+[PipelineWorker] No more tasks and task queue is stopped. Exiting.
+==14903== 
+==14903== HEAP SUMMARY:
+==14903==     in use at exit: 80 bytes in 2 blocks
+==14903==   total heap usage: 587 allocs, 585 frees, 108,535 bytes allocated
+==14903== 
+==14903== LEAK SUMMARY:
+==14903==    definitely lost: 0 bytes in 0 blocks
+==14903==    indirectly lost: 0 bytes in 0 blocks
+==14903==      possibly lost: 0 bytes in 0 blocks
+==14903==    still reachable: 80 bytes in 2 blocks
+==14903==         suppressed: 0 bytes in 0 blocks
+==14903== Rerun with --leak-check=full to see details of leaked memory
+==14903== 
+==14903== For lists of detected and suppressed errors, rerun with: -s
+==14903== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
